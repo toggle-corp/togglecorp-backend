@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "ToggleCorp website"
+version = "0.1.0"
+description = ""
+authors = ["deep-dev <dev@thedeep.io>"]
+license = "GNU Affero General Public License v3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11.3"
+requests = "*"
+django-environ = "*"
+Django = ">=4.2,<4.3"
+drf-writable-nested = "*"
+djangorestframework = "*"
+psycopg2-binary = "==2.9.6"
+django-cors-headers = "*"
+django-premailer = "*"
+django-storages = "*"
+django-admin-autocomplete-filter = "*"
+strawberry-graphql = "^0.177"
+strawberry-django-plus = "*"
+sentry-sdk = "*"
+ipython = "*"
+factory-boy = "*"
+user-agents = "*"
+django-ses = "3"
+celery = {extras = ["redis"], version = "^5.3.4"}
+django-redis = "^5.3.0"
+pandas = "2.0.3"
+pyxform = "^1.12.1"
+openpyxl = "*"
+celery-types = "*"
+django-prettyjson = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-profiling = "*"
+pytest-ordering = "*"
+pytest-django = "*"
+django-stubs = { version = "*", allow-prereleases = true }
+djangorestframework-stubs = { version = "*", allow-prereleases = true }
+
+[tool.pyright]
+exclude = [
+    "**/__pycache__",
+    "**/snap_test_*.py",
+]
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "main.settings"
+log_cli = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
