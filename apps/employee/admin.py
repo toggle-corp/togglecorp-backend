@@ -3,4 +3,12 @@ from apps.employee.models import Employee
 
 # Register your models here.
 
-admin.site.register(Employee)
+
+@admin.register(Employee)
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display = (
+        'employee_id',
+        'name',
+        'department',
+        'position'
+    )

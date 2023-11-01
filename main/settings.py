@@ -128,6 +128,7 @@ INSTALLED_APPS = [
     # Internal apps
     'apps.common',  # Common
     'apps.user',
+    'apps.employee'
 ]
 
 MIDDLEWARE = [
